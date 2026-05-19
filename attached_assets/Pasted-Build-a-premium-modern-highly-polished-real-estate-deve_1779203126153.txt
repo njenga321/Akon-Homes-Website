@@ -1,0 +1,198 @@
+Build a premium, modern, highly polished real estate developer website called “Akon Homes”.
+
+This is a portfolio-grade frontend project meant to simulate a real-world commercial website for a luxury real estate development company.
+
+TECH STACK:
+
+* Next.js 15 App Router
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* Lucide React icons
+* Responsive-first architecture
+* Clean reusable component system
+* Modern folder structure
+* SEO-ready metadata structure
+* Smooth page transitions
+* Mobile-first responsiveness
+
+OBJECTIVE:
+The website must feel:
+
+* luxurious,
+* trustworthy,
+* modern,
+* cinematic,
+* corporate,
+* conversion-focused.
+
+The site should look comparable to premium real estate brands globally.
+
+DESIGN DIRECTION:
+Minimal luxury aesthetic.
+
+Avoid:
+
+* cheap gradients,
+* oversaturated colors,
+* generic templates,
+* excessive animation,
+* clutter.
+
+Use:
+
+* restrained motion,
+* large whitespace,
+* strong typography hierarchy,
+* cinematic layouts,
+* premium image presentation,
+* elegant transitions.
+
+COLOR PALETTE:
+Primary Background:
+#0F1720
+
+Secondary Background:
+#161F2C
+
+Accent Bronze:
+#C8A46B
+
+Warm White:
+#F5F1EA
+
+Muted Text:
+#A8B0BC
+
+Soft Border:
+rgba(255,255,255,0.08)
+
+Hover Bronze:
+#D6B37A
+
+Typography:
+
+* Use “Playfair Display” for headings
+* Use “Inter” for body text
+
+TYPOGRAPHY STYLE:
+Headings:
+
+* Elegant
+* Large
+* Tight line-height
+* Premium editorial feel
+
+Body:
+
+* Clean
+* Minimal
+* Highly readable
+
+GLOBAL UI RULES:
+
+* Large section spacing
+* Rounded corners: 20px to 28px
+* Soft shadows only
+* Smooth hover animations
+* Subtle glassmorphism in selected areas
+* Sticky navbar with blur effect
+* Smooth scrolling
+* Elegant hover states
+* No harsh borders
+
+ANIMATION STYLE:
+Use Framer Motion.
+
+Animations must be:
+
+* subtle,
+* smooth,
+* premium,
+* slow and elegant.
+
+Use:
+
+* fade-up reveals,
+* staggered grids,
+* image scale hover,
+* opacity transitions,
+* smooth page transitions.
+
+Avoid:
+
+* bouncing,
+* spinning,
+* flashy effects.
+
+SITE STRUCTURE:
+Create pages and routes for:
+
+* Home
+* Developments
+* Single Development
+* About
+* Blog
+* Single Blog
+* Contact
+* Custom 404 page
+
+COMPONENT STRUCTURE:
+Create reusable components:
+
+* Navbar
+* Footer
+* Hero sections
+* Section titles
+* Property cards
+* Buttons
+* CTA sections
+* Testimonial cards
+* Timeline
+* Animated counters
+* Inquiry form
+* Blog cards
+* Gallery slider
+* Filter system
+
+LAYOUT:
+Use a clean grid system with maximum width containers.
+
+Spacing should feel premium and breathable.
+
+NAVBAR:
+Transparent at top.
+Blur background on scroll.
+Desktop + mobile menu.
+Sticky behavior.
+
+NAVBAR LINKS:
+
+* Home
+* Developments
+* About
+* Blog
+* Contact
+
+Right side CTA button:
+“Book Site Visit”
+
+FOOTER:
+Premium multi-column footer with:
+
+* company info,
+* quick links,
+* contact,
+* newsletter field,
+* social icons.
+
+Create dummy data structures for:
+
+* properties,
+* blog posts,
+* testimonials,
+* project updates.
+
+All pages should use realistic placeholder content related to luxury real estate developments.
+
+Build the full foundational architecture first before adding advanced page sections.
