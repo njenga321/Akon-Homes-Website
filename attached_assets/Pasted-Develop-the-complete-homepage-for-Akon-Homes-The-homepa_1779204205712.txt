@@ -1,0 +1,146 @@
+Develop the complete homepage for Akon Homes.
+
+The homepage must feel cinematic, luxurious, and conversion-focused.
+
+HOMEPAGE STRUCTURE:
+
+1. HERO SECTION
+   Full viewport height.
+
+Include:
+
+* cinematic real estate background image/video,
+* dark overlay,
+* elegant typography,
+* animated reveal sequence,
+* floating statistics card,
+* dual CTA buttons.
+
+Headline example style:
+“Redefining Modern Urban Living”
+
+Subheadline:
+Short luxury-focused value proposition.
+
+Buttons:
+
+* Explore Developments
+* Schedule a Visit
+
+Add animated scroll indicator.
+
+2. TRUST STATISTICS SECTION
+   Horizontal premium stats layout.
+
+Include:
+
+* 15+ Years Experience
+* 850+ Units Delivered
+* 12 Premium Developments
+* 98% Occupancy Rate
+
+Use animated counters.
+
+3. FEATURED DEVELOPMENTS
+   Luxury property card grid.
+
+Each card must contain:
+
+* project image,
+* status badge,
+* location,
+* pricing,
+* short description,
+* hover interactions,
+* CTA.
+
+Use staggered reveal animations.
+
+Add section filtering tabs:
+
+* All
+* Completed
+* Ongoing
+* Upcoming
+
+4. WHY AKON HOMES
+   Use premium icon cards.
+
+Topics:
+
+* Prime Locations
+* Sustainable Design
+* Timely Delivery
+* Premium Finishes
+
+Use subtle hover elevation effects.
+
+5. LIFESTYLE SECTION
+   Large editorial split-layout section.
+
+Use:
+
+* oversized typography,
+* layered imagery,
+* elegant spacing.
+
+Focus on:
+
+* luxury living,
+* architecture,
+* lifestyle,
+* investment appeal.
+
+6. CONSTRUCTION PROGRESS
+   Create horizontal progress cards.
+
+Each update includes:
+
+* image,
+* title,
+* completion percentage,
+* short update.
+
+Add smooth card hover effects.
+
+7. TESTIMONIALS
+   Premium testimonial cards.
+
+Include:
+
+* profile image,
+* client name,
+* project purchased,
+* quotation.
+
+Avoid generic carousel spam.
+
+Use clean elegant layout.
+
+8. INVESTMENT CTA SECTION
+   Dark luxury CTA banner.
+
+Include:
+
+* investment-focused headline,
+* payment flexibility mention,
+* CTA buttons.
+
+9. FINAL CONTACT CTA
+   Large premium section before footer.
+
+Include:
+
+* inquiry form,
+* WhatsApp CTA,
+* contact information.
+
+UX REQUIREMENTS:
+
+* strong visual hierarchy,
+* excellent spacing,
+* responsive layouts,
+* smooth motion,
+* no clutter.
+
+The homepage should feel like a premium commercial website ready for production.
