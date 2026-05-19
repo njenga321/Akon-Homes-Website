@@ -112,7 +112,7 @@ export default function Home() {
           className="absolute inset-0"
         >
           <img
-            src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&q=90&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=90&auto=format&fit=crop"
             alt="Akon Homes luxury development"
             className="w-full h-full object-cover"
           />
@@ -153,41 +153,19 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 1.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-20"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link href="/developments" data-testid="link-explore-hero">
-              <button className="inline-flex items-center gap-2 px-9 py-4 rounded-full bg-primary text-primary-foreground font-medium text-sm tracking-wide hover:bg-accent transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/25">
+              <button className="cursor-pointer inline-flex items-center gap-2 px-9 py-4 rounded-full bg-primary text-primary-foreground font-medium text-sm tracking-wide hover:bg-accent transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/25">
                 Explore Developments
                 <ArrowRight className="w-4 h-4" />
               </button>
             </Link>
             <Link href="/contact" data-testid="link-schedule-hero">
-              <button className="inline-flex items-center gap-2 px-9 py-4 rounded-full border border-white/25 text-foreground font-medium text-sm tracking-wide hover:border-primary/60 hover:text-primary transition-all duration-300 backdrop-blur-sm">
+              <button className="cursor-pointer inline-flex items-center gap-2 px-9 py-4 rounded-full border border-white/25 text-foreground font-medium text-sm tracking-wide hover:border-primary/60 hover:text-primary transition-all duration-300 backdrop-blur-sm">
                 Schedule a Visit
               </button>
             </Link>
-          </motion.div>
-
-          {/* Floating Stats Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}
-            className="inline-flex flex-wrap gap-x-10 gap-y-4 px-10 py-6 rounded-2xl border border-white/[0.12] backdrop-blur-xl justify-center"
-            style={{ background: "rgba(15,23,32,0.75)" }}
-            data-testid="hero-stats-card"
-          >
-            {[
-              { value: "15+", label: "Years" },
-              { value: "850+", label: "Units" },
-              { value: "12", label: "Developments" },
-              { value: "98%", label: "Occupancy" },
-            ].map((s, i) => (
-              <div key={i} className="text-center px-4">
-                <p className="font-serif text-2xl text-primary">{s.value}</p>
-                <p className="text-muted-foreground text-xs tracking-wide uppercase mt-0.5">{s.label}</p>
-              </div>
-            ))}
           </motion.div>
         </div>
 

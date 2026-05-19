@@ -91,4 +91,13 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-normal;
   }
+  button,
+  a,
+  [role="button"],
+  [role="tab"],
+  label[for],
+  select,
+  summary {
+    cursor: pointer;
+  }
 }

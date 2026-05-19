@@ -74,10 +74,10 @@ const faqs = [
 ];
 
 const officeGallery = [
-  "https://images.unsplash.com/photo-1600210491892-03d54c37f5c8?w=700&q=80&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=700&q=80&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1494526585095-c41746248156?w=700&q=80&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=700&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=85&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=900&q=85&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&q=85&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1583321500900-82807e458f3c?w=900&q=85&auto=format&fit=crop",
 ];
 
 function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
@@ -263,15 +263,18 @@ export default function Contact() {
       <section className="py-32" data-testid="section-map">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="font-serif text-4xl text-foreground">Where We Are</motion.h2>
+            <motion.p initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-xs tracking-[0.25em] uppercase text-primary mb-4 font-medium">Global Presence</motion.p>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="font-serif text-4xl md:text-5xl text-foreground">Where We Are</motion.h2>
           </div>
+
+          {/* Desktop: stylised map visual */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="rounded-3xl overflow-hidden border border-white/[0.08] relative"
-            style={{ aspectRatio: "21/7" }}
+            className="hidden md:block rounded-3xl overflow-hidden border border-white/[0.08] relative"
+            style={{ aspectRatio: "21/8" }}
           >
             <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 35% 55%, rgba(200,164,107,0.06) 0%, transparent 60%), #0d1820" }}>
               <svg className="w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
@@ -284,12 +287,11 @@ export default function Contact() {
               </svg>
             </div>
 
-            {/* Location pins */}
             {[
-              { label: "Lagos", sub: "Main Office", x: "27%", y: "55%" },
-              { label: "Abuja", sub: "Sales Office", x: "34%", y: "46%" },
-              { label: "Port Harcourt", sub: "Sales Office", x: "33%", y: "59%" },
-              { label: "London", sub: "UK Office", x: "43%", y: "21%" },
+              { label: "Lagos", sub: "Main Office", x: "27%", y: "58%" },
+              { label: "Abuja", sub: "Sales Office", x: "34%", y: "48%" },
+              { label: "Port Harcourt", sub: "Sales Office", x: "33%", y: "62%" },
+              { label: "London", sub: "UK Office", x: "43%", y: "22%" },
             ].map((pin, i) => (
               <motion.div
                 key={i}
@@ -303,7 +305,7 @@ export default function Contact() {
                 <div className="flex flex-col items-center">
                   <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }} transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3 }} className="absolute w-5 h-5 rounded-full border-2 border-primary" style={{ top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
                   <div className="w-4 h-4 rounded-full bg-primary border-2 border-background shadow-lg shadow-primary/50 z-10" />
-                  <div className="mt-2 px-3 py-2 rounded-xl backdrop-blur-sm border border-white/[0.1] text-center" style={{ background: "rgba(15,23,32,0.85)" }}>
+                  <div className="mt-2 px-3 py-2 rounded-xl backdrop-blur-sm border border-white/[0.1] text-center" style={{ background: "rgba(15,23,32,0.88)" }}>
                     <p className="text-foreground text-xs font-medium whitespace-nowrap">{pin.label}</p>
                     <p className="text-muted-foreground text-[10px]">{pin.sub}</p>
                   </div>
@@ -311,7 +313,6 @@ export default function Contact() {
               </motion.div>
             ))}
 
-            {/* Legend */}
             <div className="absolute bottom-4 right-4 px-4 py-3 rounded-xl border border-white/[0.08] backdrop-blur-sm" style={{ background: "rgba(15,23,32,0.85)" }}>
               <p className="text-muted-foreground text-xs mb-2">Office Locations</p>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -320,6 +321,39 @@ export default function Contact() {
               </div>
             </div>
           </motion.div>
+
+          {/* Mobile: location cards grid */}
+          <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { label: "Lagos", sub: "Main Office", flag: "🇳🇬", note: "Headquarters" },
+              { label: "Abuja", sub: "Sales Office", flag: "🇳🇬", note: "Capital Territory" },
+              { label: "Port Harcourt", sub: "Sales Office", flag: "🇳🇬", note: "South South" },
+              { label: "London", sub: "UK Office", flag: "🇬🇧", note: "Marylebone, W1" },
+            ].map((loc, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="rounded-2xl bg-card border border-white/[0.08] p-5 flex items-center gap-4"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+                  <motion.div
+                    animate={{ scale: [1, 1.3, 1], opacity: [0.7, 0, 0.7] }}
+                    transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.4 }}
+                    className="absolute w-5 h-5 rounded-full border border-primary"
+                  />
+                  <div className="w-3 h-3 rounded-full bg-primary shadow-md shadow-primary/50" />
+                </div>
+                <div>
+                  <p className="text-foreground font-serif text-lg leading-none">{loc.flag} {loc.label}</p>
+                  <p className="text-primary text-xs mt-1">{loc.sub}</p>
+                  <p className="text-muted-foreground text-xs">{loc.note}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
