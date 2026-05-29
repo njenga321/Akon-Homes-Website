@@ -13,6 +13,7 @@ import BlogDetail from "@/pages/BlogDetail";
 import Contact from "@/pages/Contact";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,7 @@ function Router() {
         <AnimatedRoutes />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }

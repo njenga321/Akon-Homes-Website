@@ -22,10 +22,11 @@ export default function PropertyCard({ property, index = 0 }: PropertyCardProps)
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      className="h-full"
     >
-      <Link href={`/developments/${property.id}`} data-testid={`card-property-${property.id}`}>
-        <div className="group cursor-pointer rounded-3xl overflow-hidden bg-card border border-white/[0.08] transition-all duration-500 hover:border-primary/30 hover:shadow-2xl hover:shadow-black/40">
-          <div className="relative aspect-[4/3] overflow-hidden">
+      <Link href={`/developments/${property.id}`} data-testid={`card-property-${property.id}`} className="h-full block">
+        <div className="group cursor-pointer rounded-3xl overflow-hidden bg-card border border-white/[0.08] transition-all duration-500 hover:border-primary/30 hover:shadow-2xl hover:shadow-black/40 h-full flex flex-col">
+          <div className="relative aspect-[4/3] overflow-hidden shrink-0">
             <img
               src={property.image}
               alt={property.name}

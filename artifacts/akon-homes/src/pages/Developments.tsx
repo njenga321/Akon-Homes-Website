@@ -438,13 +438,15 @@ export default function Developments() {
 
   return (
     <div>
+      {/* Sticky wrapper — filter bar only sticks within this div */}
+      <div className="relative">
       {/* ── 1. HERO ─────────────────────────────────────────────────────── */}
-      <section className="relative pt-40 pb-28 overflow-hidden">
+      <section className="relative min-h-[72vh] flex items-end pb-28 overflow-hidden bg-background">
         <motion.div
-          initial={{ scale: 1.06, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          initial={{ scale: 1.06 }}
+          animate={{ scale: 1 }}
           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0"
         >
           <img
             src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=85&auto=format&fit=crop"
@@ -454,7 +456,7 @@ export default function Developments() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/75 via-background/60 to-background" />
         </motion.div>
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="relative max-w-7xl mx-auto px-6 pt-40 w-full">
           {/* Breadcrumb */}
           <motion.nav
             initial={{ opacity: 0, y: 12 }}
@@ -507,7 +509,8 @@ export default function Developments() {
       <section className="sticky top-[72px] z-20 bg-background/90 backdrop-blur-xl border-b border-white/[0.06] py-4">
         <div className="max-w-7xl mx-auto px-6">
           {/* Desktop filters */}
-          <div className="hidden md:flex items-center gap-3 flex-wrap" data-testid="desktop-filters">
+          <div className="hidden md:block" data-testid="desktop-filters">
+          <div className="flex items-center gap-3 flex-wrap">
             {/* Status pills */}
             <div className="flex gap-2 flex-wrap">
               {statusOptions.map((s) => (
@@ -565,9 +568,10 @@ export default function Developments() {
               )}
             </AnimatePresence>
 
-            <div className="ml-auto text-xs text-muted-foreground">
-              <span className="text-foreground font-medium">{filtered.length}</span> developments
-            </div>
+          </div>
+          <div className="mt-2 text-xs text-muted-foreground">
+            <span className="text-foreground font-medium">{filtered.length}</span> developments
+          </div>
           </div>
 
           {/* Mobile filter toggle */}
@@ -747,6 +751,7 @@ export default function Developments() {
           </AnimatePresence>
         </div>
       </section>
+      </div>{/* end sticky wrapper */}
 
       {/* ── 5. MAP SECTION ───────────────────────────────────────────────── */}
       <section className="py-32 border-y border-white/[0.06] bg-card/30" data-testid="section-map">

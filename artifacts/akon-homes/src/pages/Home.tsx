@@ -387,7 +387,7 @@ export default function Home() {
                 className="absolute -bottom-8 -left-8 w-48 h-48 rounded-2xl overflow-hidden border-4 border-background shadow-2xl hidden md:block"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1600210491892-03d54c37f5c8?w=400&q=85&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=85&auto=format&fit=crop"
                   alt="Premium finishes"
                   className="w-full h-full object-cover"
                 />

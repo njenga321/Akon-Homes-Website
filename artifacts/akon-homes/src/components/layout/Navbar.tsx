@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoSrc from "@assets/image_1780063580360.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -41,8 +42,16 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" data-testid="link-logo">
-            <span className="font-serif text-xl md:text-2xl tracking-[0.2em] text-primary cursor-pointer hover:text-accent transition-colors duration-300">
-              AKON HOMES
+            <span className="flex items-center gap-3 cursor-pointer group">
+              <img
+                src={logoSrc}
+                alt="Akon Homes logo"
+                className="h-10 w-10 object-contain shrink-0"
+                style={{ mixBlendMode: "screen" }}
+              />
+              <span className="font-serif text-xl md:text-2xl tracking-[0.2em] text-primary group-hover:text-accent transition-colors duration-300">
+                AKON HOMES
+              </span>
             </span>
           </Link>
 

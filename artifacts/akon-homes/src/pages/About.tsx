@@ -99,37 +99,37 @@ const team = [
     name: "Akinwale Babatunde",
     title: "Founder & Chief Executive",
     bio: "A visionary who founded Akon Homes with a single conviction: that Nigeria deserved world-class homes. Over 25 years in real estate across three continents.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=85&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=85&auto=format&fit=crop",
   },
   {
     name: "Chidinma Eze",
     title: "Creative Director",
     bio: "Trained at the Architectural Association, London. Leads our design philosophy and is the creative force behind our most celebrated projects.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=85&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=85&auto=format&fit=crop",
   },
   {
     name: "Emeka Nwosu",
     title: "Director of Sales",
     bio: "15 years leading premium property sales across Nigeria and the UK diaspora market. Expert in structuring complex cross-border transactions.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=85&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=600&q=85&auto=format&fit=crop",
   },
   {
     name: "Dr. Kemi Adeyemi",
     title: "Head of Sustainability",
     bio: "Holds a doctorate in sustainable urban design from UCL. Leads Akon Homes' environmental strategy and our industry-leading green charter.",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=85&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=85&auto=format&fit=crop",
   },
   {
     name: "Adebola Okonkwo",
     title: "Head of Research",
     bio: "Former Goldman Sachs analyst. Provides the market intelligence that underpins Akon Homes' site acquisition and investment strategy.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=85&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583692331507-fc0bd348695d?w=600&q=85&auto=format&fit=crop",
   },
   {
     name: "Ngozi Okafor",
     title: "Client Relations Director",
     bio: "Ensures every Akon Homes buyer receives a seamlessly managed journey from first enquiry to key handover and beyond.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=85&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1614023342667-6f060e9d1e04?w=600&q=85&auto=format&fit=crop",
   },
 ];
 
