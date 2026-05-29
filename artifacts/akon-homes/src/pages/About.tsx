@@ -150,11 +150,11 @@ export default function About() {
   return (
     <div>
       {/* ── HERO ──────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[85vh] flex items-end pb-24 overflow-hidden">
+      <section className="relative min-h-[72vh] flex items-end pb-28 overflow-hidden bg-background">
         <motion.div
-          initial={{ scale: 1.08, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ scale: 1.06 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0"
         >
           <img
@@ -162,10 +162,10 @@ export default function About() {
             alt="Akon Homes architecture"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10" />
         </motion.div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-40">
+        <div className="relative max-w-7xl mx-auto px-6 pt-40 w-full">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs text-muted-foreground mb-8">
             <Link href="/"><span className="flex items-center gap-1 hover:text-primary transition-colors cursor-pointer"><Home className="w-3 h-3" />Home</span></Link>
@@ -250,13 +250,13 @@ export default function About() {
               />
             </div>
             <div
-              className="absolute -bottom-6 -left-6 rounded-2xl px-6 py-5 border border-white/[0.08] shadow-2xl"
+              className="absolute bottom-4 left-4 md:-bottom-6 md:-left-6 rounded-2xl px-6 py-5 border border-white/[0.08] shadow-2xl"
               style={{ background: "rgba(15,23,32,0.92)", backdropFilter: "blur(16px)" }}
             >
               <p className="font-serif text-3xl text-primary mb-1">15+</p>
               <p className="text-muted-foreground text-sm">Years building without compromise</p>
             </div>
-            <div className="absolute -top-6 -right-6 grid grid-cols-2 gap-2">
+            <div className="absolute top-4 right-4 md:-top-6 md:-right-6 grid grid-cols-2 gap-2">
               {awards.slice(0, 2).map((a, i) => (
                 <div key={i} className="rounded-xl px-4 py-3 border border-white/[0.08] text-center" style={{ background: "rgba(15,23,32,0.92)", backdropFilter: "blur(12px)" }}>
                   <Award className="w-4 h-4 text-primary mx-auto mb-1" />
@@ -413,11 +413,11 @@ export default function About() {
                 className="group rounded-3xl overflow-hidden bg-background border border-white/[0.08] hover:border-primary/30 transition-all duration-500"
                 data-testid={`card-team-${i}`}
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-square overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Hover overlay with bio */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-end p-6">

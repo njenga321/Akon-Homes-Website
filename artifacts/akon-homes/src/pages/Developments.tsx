@@ -179,9 +179,9 @@ function QuickPreviewModal({
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 30, scale: 0.97 }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="relative w-full max-w-4xl rounded-3xl bg-card border border-white/[0.1] overflow-hidden shadow-2xl"
+          className="relative w-full max-w-4xl rounded-3xl bg-card border border-white/[0.1] shadow-2xl max-h-[90svh] flex flex-col overflow-hidden"
         >
-          {/* Close */}
+          {/* Close — anchored to panel corner, unaffected by inner scroll */}
           <button
             onClick={onClose}
             data-testid="button-modal-close"
@@ -190,6 +190,8 @@ function QuickPreviewModal({
             <X className="w-4 h-4" />
           </button>
 
+          {/* Scrollable body */}
+          <div className="overflow-y-auto flex-1">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Gallery */}
             <div className="relative aspect-square md:aspect-auto overflow-hidden group">
@@ -267,7 +269,7 @@ function QuickPreviewModal({
                 {property.description}
               </p>
 
-              <div className="space-y-3">
+              <div className="flex flex-col gap-4">
                 <Link href={`/developments/${property.id}`} data-testid={`link-modal-view-${property.id}`}>
                   <button
                     onClick={onClose}
@@ -287,6 +289,7 @@ function QuickPreviewModal({
               </div>
             </div>
           </div>
+          </div>{/* end scrollable body */}
         </motion.div>
       </motion.div>
     </AnimatePresence>
@@ -317,10 +320,7 @@ function DevelopmentCard({
         <img
           src={property.image}
           alt={property.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-107"
-          style={{ transform: "scale(1)", transition: "transform 700ms cubic-bezier(0.22,1,0.36,1)" }}
-          onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.07)")}
-          onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -345,9 +345,9 @@ function DevelopmentCard({
           <div className="flex items-end justify-between">
             <div>
               <p className="text-white/70 text-xs mb-0.5">{property.type}</p>
-              <p className="text-white font-serif text-xl leading-tight">{property.name}</p>
+              <p className="text-white font-serif text-xl leading-tight truncate">{property.name}</p>
             </div>
-            <p className="text-primary font-medium text-sm bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-full border border-primary/30">
+            <p className="text-primary font-medium text-sm bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-full border border-primary/30 whitespace-nowrap shrink-0">
               {property.price}
             </p>
           </div>
@@ -754,7 +754,7 @@ export default function Developments() {
       </div>{/* end sticky wrapper */}
 
       {/* ── 5. MAP SECTION ───────────────────────────────────────────────── */}
-      <section className="py-32 border-y border-white/[0.06] bg-card/30" data-testid="section-map">
+      <section className="hidden md:block py-32 border-y border-white/[0.06] bg-card/30" data-testid="section-map">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>

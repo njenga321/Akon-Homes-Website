@@ -541,7 +541,7 @@ export default function DevelopmentDetail() {
             >
               {/* SVG Plan */}
               <div className="lg:col-span-2 relative">
-                <div className="rounded-3xl bg-background border border-white/[0.08] p-6 aspect-[4/3] relative group">
+                <div className="rounded-3xl bg-background border border-white/[0.08] p-4 md:p-6 aspect-[4/3] relative group overflow-hidden">
                   <FloorPlanSVG rooms={extras.floorPlans[activePlan].rooms} />
                   {/* Zoom button */}
                   <button
@@ -551,10 +551,10 @@ export default function DevelopmentDetail() {
                   >
                     <ZoomIn className="w-4 h-4" />
                   </button>
-                  <p className="absolute bottom-4 left-4 text-xs text-muted-foreground/60 italic">
-                    Indicative only — not to scale
-                  </p>
                 </div>
+                <p className="mt-3 mb-6 lg:mb-0 text-xs text-muted-foreground/60 italic px-1">
+                  Indicative only — not to scale
+                </p>
               </div>
 
               {/* Plan details */}
@@ -884,7 +884,11 @@ export default function DevelopmentDetail() {
                     Most Popular
                   </div>
                 )}
-                <div className="text-3xl mb-4">{plan.icon}</div>
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                  {plan.icon === "🏠" && <Home className="w-6 h-6 text-primary" />}
+                  {plan.icon === "📅" && <Calendar className="w-6 h-6 text-primary" />}
+                  {plan.icon === "📋" && <Layers className="w-6 h-6 text-primary" />}
+                </div>
                 <h3 className="font-serif text-2xl text-foreground mb-1">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm mb-6">Flexible payment structure</p>
 

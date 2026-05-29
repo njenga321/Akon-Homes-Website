@@ -119,7 +119,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         </motion.div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-28 md:pt-0">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif text-6xl md:text-8xl lg:text-[7rem] text-foreground leading-[0.9] mb-6"
+            className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] text-foreground leading-[0.95] mb-6"
           >
             Redefining Modern
             <br />

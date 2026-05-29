@@ -325,10 +325,10 @@ export default function Contact() {
           {/* Mobile: location cards grid */}
           <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { label: "Lagos", sub: "Main Office", flag: "🇳🇬", note: "Headquarters" },
-              { label: "Abuja", sub: "Sales Office", flag: "🇳🇬", note: "Capital Territory" },
-              { label: "Port Harcourt", sub: "Sales Office", flag: "🇳🇬", note: "South South" },
-              { label: "London", sub: "UK Office", flag: "🇬🇧", note: "Marylebone, W1" },
+              { label: "Lagos", sub: "Main Office", note: "Headquarters" },
+              { label: "Abuja", sub: "Sales Office", note: "Capital Territory" },
+              { label: "Port Harcourt", sub: "Sales Office", note: "South South" },
+              { label: "London", sub: "UK Office", note: "Marylebone, W1" },
             ].map((loc, i) => (
               <motion.div
                 key={i}
@@ -347,7 +347,7 @@ export default function Contact() {
                   <div className="w-3 h-3 rounded-full bg-primary shadow-md shadow-primary/50" />
                 </div>
                 <div>
-                  <p className="text-foreground font-serif text-lg leading-none">{loc.flag} {loc.label}</p>
+                  <p className="text-foreground font-serif text-lg leading-none">{loc.label}</p>
                   <p className="text-primary text-xs mt-1">{loc.sub}</p>
                   <p className="text-muted-foreground text-xs">{loc.note}</p>
                 </div>

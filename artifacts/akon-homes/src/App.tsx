@@ -14,6 +14,7 @@ import Contact from "@/pages/Contact";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ function AnimatedRoutes() {
 function Router() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground dark">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1 flex flex-col">
         <AnimatedRoutes />
